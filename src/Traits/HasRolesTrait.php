@@ -15,6 +15,6 @@ trait HasRolesTrait
     {
         $model = get_class(Authorization::role());
 
-        return $this->belongsToMany($model);
+        return $this->belongsToMany($model, 'role_user', 'user_id', 'role_id');
     }
 }

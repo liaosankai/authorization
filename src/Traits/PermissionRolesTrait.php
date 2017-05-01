@@ -18,7 +18,7 @@ trait PermissionRolesTrait
     {
         $model = get_class(Authorization::user());
 
-        return $this->belongsToMany($model);
+        return $this->belongsToMany($model, 'permission_user', 'permission_id', 'user_id');
     }
 
     /**
